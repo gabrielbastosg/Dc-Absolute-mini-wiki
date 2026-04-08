@@ -1,0 +1,258 @@
+/* ============================================
+   BOTÃO / LINK 
+   ============================================ */
+.btn-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* serve tanto pra <button> quanto <a> */
+.btn-link,
+#btn-herois {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid var(--cor-destaque);
+    color: var(--cor-destaque);
+    font-family: var(--fonte-principal);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* efeito */
+.btn-link::after,
+#btn-herois::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--cor-destaque);
+    top: 0;
+    left: -100%;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.btn-link:hover::after,
+#btn-herois:hover::after {
+    left: 0;
+}
+
+.btn-link:hover,
+#btn-herois:hover {
+    color: #000;
+}
+
+/* ============================================
+   CARDS
+============================================ */
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 40px 20px;
+}
+
+.card {
+    background: linear-gradient(145deg, rgba(20,20,20,0.9), rgba(40,40,40,0.6));
+    border-radius: 12px;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px var(--cor-destaque);
+    border: 1px solid rgba(255,255,255,0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.card h3 {
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: var(--cor-texto-fraco);
+    font-size: 0.9rem;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 0 25px var(--cor-destaque);
+}
+.card:hover h3 {
+    letter-spacing: 1px;
+}
+
+
+
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+/* INFO (tipo ficha técnica) */
+.info {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.info ul {
+    list-style: none;
+    max-width: 400px;
+    margin: auto;
+}
+
+.info li {
+    margin: 8px 0;
+    color: var(--cor-texto-suave);
+}
+
+.info a {
+    color: #4da6ff; /* azul estilo link */
+    text-decoration: none;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+/* HABILIDADES */
+.habilidades {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.habilidades ul {
+    list-style: none;
+}
+
+.habilidades li {
+    margin: 8px 0;
+    color: var(--cor-texto-fraco);
+}
+
+/* ============================================
+   ALIASES
+   ============================================ */
+.aliases {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.aliases h3 {
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.aliases ul {
+    list-style: none;
+}
+
+.aliases li {
+    display: inline-block;
+    margin: 6px;
+    padding: 6px 14px;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 20px;
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.aliases li:hover {
+    background: var(--cor-destaque);
+    color: #000;
+}
+
+/* CORES POR HERÓI */
+.card.batman:hover {
+    box-shadow: 0 0 20px #888886;
+}
+
+.card.superman:hover {
+    box-shadow: 0 0 20px #fa2003;
+}
+
+.card.flash:hover {
+    box-shadow: 0 0 20px #fae100;
+}
+
+.card.wonderwoman:hover {
+    box-shadow: 0 0 20px #8d240f;
+}
+
+.card.lantern:hover {
+    box-shadow: 0 0 20px #30f578;
+}
+
+.card.martian:hover {
+    box-shadow: 0 0 20px #10833a;
+}
+
+/* ============================================
+   BOTÃO / LINK 
+   ============================================ */
+.btn-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* serve tanto pra <button> quanto <a> */
+.btn-link,
+#btn-herois {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid var(--cor-destaque);
+    color: var(--cor-destaque);
+    font-family: var(--fonte-principal);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* efeito */
+.btn-link::after,
+#btn-herois::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--cor-destaque);
+    top: 0;
+    left: -100%;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.btn-link:hover::after,
+#btn-herois:hover::after {
+    left: 0;
+}
+
+.btn-link:hover,
+#btn-herois:hover {
+    color: #000;
+}
