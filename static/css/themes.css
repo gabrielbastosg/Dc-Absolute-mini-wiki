@@ -36,6 +36,7 @@
     margin: 20px auto;
     padding: 20px;
     border-left: 4px solid #facc15;
+    border-right: 4px solid #facc15;
 }
 
 .batman-theme li {
@@ -68,22 +69,23 @@
 ================================ */
 
 .superman-theme {
-    background: linear-gradient(135deg, #020202, #1a0000);
-    color: #f5f5f5;
+    background: linear-gradient(135deg, #1a0000, #ff3c00);
+    color: #fff5f0;
 }
 
 .superman-theme header {
-    background: rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid #e50914;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #ff3c00;
 }
 
 .superman-theme header h1 {
-    color: #e50914;
-    text-shadow: 0 0 12px rgba(229, 9, 20, 0.8);
+    color: #ffae00;
+    text-shadow: 0 0 15px rgba(255, 174, 0, 0.9);
 }
 
 .superman-theme .intro {
-    color: #f39d24;
+    color: #ffd166;
+    font-size: 1.2rem;
 }
 
 .superman-theme a {
@@ -96,15 +98,28 @@
 }
 
 .superman-theme section {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.35); 
+    backdrop-filter: blur(8px);
+
+    border-radius: 12px;
+    margin: 25px auto;
     padding: 20px;
-    border-left: 4px solid #e50914;
+
+    border-left: 4px solid #ff3c00;
+    border-right: 4px solid #ffae00;
+
+    max-width: 900px;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
 .superman-theme h2 {
-    color: #f39d24;
+    color: #ffae00;
+    text-align: center;
+}
+.superman-theme h3{
+    color: #ffd166;
+    text-align: center;
 }
 
 .superman-theme li {
@@ -129,6 +144,40 @@
     margin: 20px auto;
     border-radius: 10px;
     border: 3px solid #e50914;
+}
+
+.superman-theme p,
+.superman-theme li,
+.superman-theme span,
+.superman-theme strong {
+    color: #fff5f0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.superman-theme .btn-link {
+    background: linear-gradient(45deg, #ff3c00, #ffae00);
+    color: #020202;
+    font-weight: bold;
+}
+
+.superman-theme .btn-link:hover {
+    background: linear-gradient(45deg, #ffae00, #ffd166);
+}
+
+.superman-theme .hero-img {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 3px solid #ffae00;
+    box-shadow: 0 0 25px rgba(255, 174, 0, 0.6);
+}
+.superman-theme section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 60, 0, 0.4);
+    transition: 0.3s;
 }
 
 /* ===============================
@@ -158,6 +207,7 @@
     margin-bottom: 20px;
     border-radius: 10px;
     border-left: 4px solid #D63041;
+    border-right: 4px solid #F39D24;
 }
 
 .flash-theme li {
@@ -187,12 +237,16 @@
 /* ===============================
    TEMA DA WONDER WOMAN
 ================================ */
+/* ===============================
+   TEMA DA WONDER WOMAN
+================================ */
 
 .wonderwoman-theme {
     background: linear-gradient(135deg, #020202, #A93018);
     color: #FFEFDC;
 }
 
+/* HEADER */
 .wonderwoman-theme header {
     background: rgba(0, 0, 0, 0.5);
     border-bottom: 2px solid #A93018;
@@ -207,17 +261,38 @@
     color: #A93018;
 }
 
+/* SECTIONS */
 .wonderwoman-theme section {
-    background: rgba(0, 0, 0, 0.4);
-    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
     border-radius: 10px;
-    border-left: 4px solid #A93018;
+    border-left: 4px solid #b6b4b3;
+    border-right: 4px solid #b6b4b3;
+    padding: 12px;
+    max-width: 900px;
+    transition: 0.3s;
 }
 
+.wonderwoman-theme section:hover {
+    transform: translateY(-3px);
+}
+
+/* TEXTO (CORRIGE BUG DE TEXTO CINZA) */
+.wonderwoman-theme p,
+.wonderwoman-theme li,
+.wonderwoman-theme span,
+.wonderwoman-theme strong {
+    color: #FFEFDC;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* LISTAS */
 .wonderwoman-theme li {
-    margin: 5px 0;
+    margin: 6px 0;
 }
 
+/* BOTÃO */
 .wonderwoman-theme .btn-link {
     background: #A93018;
     color: #FFEFDC;
@@ -229,13 +304,38 @@
     color: #020202;
 }
 
+/* IMAGENS */
 .wonderwoman-theme .imagem img {
     width: 100%;
     max-width: 400px;
     display: block;
-    margin: 20px auto;
-    border-radius: 10px;
+    margin: 30px auto;
+    border-radius: 12px;
     border: 3px solid #A93018;
+    box-shadow: 0 0 25px rgba(169, 48, 24, 0.5);
+    transition: 0.3s;
+
+}
+
+.wonderwoman-theme h2 {
+    color: #A93018;
+    text-shadow: 0 0 8px rgba(169, 48, 24, 0.6);
+}
+.hero-img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 30px;
+
+    border-radius: 12px;
+    border: 3px solid #A93018;
+
+    box-shadow: 0 0 20px rgba(169, 48, 24, 0.5);
+
+    transition: 0.3s;
+}
+
+.hero-img:hover {
+    transform: scale(1.05);
 }
 
 /* ===============================
@@ -372,4 +472,38 @@
     margin: 20px auto;
     border-radius: 10px;
     border: 3px solid #22c55e;
+}
+
+.wonderwoman-theme p,
+.wonderwoman-theme li,
+.wonderwoman-theme span,
+.wonderwoman-theme strong {
+    color: #FFEFDC;
+}
+
+/* =========================================
+   PADRÃO GLOBAL (TODOS OS HERÓIS)
+========================================= */
+
+/* TEXTO PADRÃO */
+body p,
+body li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* FORÇA COR DO TEXTO */
+body p,
+body li,
+body span,
+body strong {
+    color: inherit;
+}
+
+/* LIMITE DAS SECTIONS  */
+body section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
 }

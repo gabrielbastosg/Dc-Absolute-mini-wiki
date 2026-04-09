@@ -256,3 +256,79 @@
 #btn-herois:hover {
     color: #000;
 }
+
+
+
+.section-box {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+
+.section-box:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 0 25px rgba(169, 48, 24, 0.4);
+}
+
+
+.section-box ul {
+    display: inline-block;
+    text-align: left; /* mantém leitura boa */
+    margin-top: 10px;
+}
+
+.section-box li {
+    margin: 6px 0;
+}
+.section-box {
+    text-align: center;
+}
+
+.section-box h2 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+}
+
+.section-box {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+
+    border-radius: 12px;
+    padding: 25px;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
+
+    text-align: center;
+}
+
+.section-box:hover {
+    transform: translateY(-5px);
+}
+
+.section-box ul {
+    display: inline-block;
+    text-align: left;
+}
+
+.hero-img {
+    max-width: 350px;
+    width: 100%;
+    display: block;
+    margin: 25px auto 0;
+    border-radius: 12px;
+
+    box-shadow: 0 0 25px rgba(169, 48, 24, 0.6);
+    transition: 0.3s;
+}
+
+.hero-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(169, 48, 24, 0.9);
+}

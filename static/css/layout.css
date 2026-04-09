@@ -82,6 +82,7 @@ section {
     color: var(--cor-texto-fraco);
     line-height: 1.7;
 }
+
 @media (max-width: 600px) {
     header h1 {
         font-size: 2.2rem;
@@ -95,4 +96,41 @@ section {
     .card {
         width: 90%;
     }
+}
+
+
+/* ============================================
+   FUNDO DAS SEÇÕES (INFO, HABILIDADES, ETC)
+   ============================================ */
+.info, .habilidades, .equipamentos, .descricao, .origem, .curiosidades, .secundarios {
+    background-color: #8B0000; /* vermelho escuro */
+    padding: 50px 20px;        /* mais espaço acima/baixo */
+}
+
+/* Ajuste de container já existente */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-box h2 {
+    text-align: center;
+}
+
+.secundarios-lista {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.secundario-item {
+    text-align: center;
+}
+
+.secundario-icone img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }

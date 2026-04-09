@@ -45,3 +45,12 @@ body {
     color: var(--cor-texto);
     font-family: var(--fonte-principal);
 }
+
+.secundarios-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
