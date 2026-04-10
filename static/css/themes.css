@@ -37,6 +37,8 @@
     padding: 20px;
     border-left: 4px solid #facc15;
     border-right: 4px solid #facc15;
+    border-top: 4px solid #9aa0a6;
+    border-bottom: 4px solid #9aa0a6;
 }
 
 .batman-theme li {
@@ -107,6 +109,8 @@
 
     border-left: 4px solid #ff3c00;
     border-right: 4px solid #ffae00;
+    border-top: 4px solid #ffae00;
+    border-bottom: 4px solid #ff3c00;
 
     max-width: 900px;
 
@@ -167,12 +171,9 @@
 
 .superman-theme .hero-img {
     width: 100%;
-    max-width: 350px;
     display: block;
     margin: 20px auto;
     border-radius: 12px;
-    border: 3px solid #ffae00;
-    box-shadow: 0 0 25px rgba(255, 174, 0, 0.6);
 }
 .superman-theme section:hover {
     transform: translateY(-5px);
@@ -208,6 +209,8 @@
     border-radius: 10px;
     border-left: 4px solid #D63041;
     border-right: 4px solid #F39D24;
+    border-top: 4px solid #F39D24;
+    border-bottom: 4px solid #D63041;
 }
 
 .flash-theme li {
@@ -234,9 +237,6 @@
     border: 3px solid #D63041;
 }
 
-/* ===============================
-   TEMA DA WONDER WOMAN
-================================ */
 /* ===============================
    TEMA DA WONDER WOMAN
 ================================ */
@@ -268,6 +268,8 @@
     border-radius: 10px;
     border-left: 4px solid #b6b4b3;
     border-right: 4px solid #b6b4b3;
+    border-top: 4px solid #b6b4b3;
+    border-bottom: 4px solid #b6b4b3;
     padding: 12px;
     max-width: 900px;
     transition: 0.3s;
@@ -277,7 +279,7 @@
     transform: translateY(-3px);
 }
 
-/* TEXTO (CORRIGE BUG DE TEXTO CINZA) */
+/* TEXTO */
 .wonderwoman-theme p,
 .wonderwoman-theme li,
 .wonderwoman-theme span,
@@ -307,7 +309,6 @@
 /* IMAGENS */
 .wonderwoman-theme .imagem img {
     width: 100%;
-    max-width: 400px;
     display: block;
     margin: 30px auto;
     border-radius: 12px;
@@ -320,22 +321,6 @@
 .wonderwoman-theme h2 {
     color: #A93018;
     text-shadow: 0 0 8px rgba(169, 48, 24, 0.6);
-}
-.hero-img {
-    width: 100%;
-    max-width: 400px;
-    margin-top: 30px;
-
-    border-radius: 12px;
-    border: 3px solid #A93018;
-
-    box-shadow: 0 0 20px rgba(169, 48, 24, 0.5);
-
-    transition: 0.3s;
-}
-
-.hero-img:hover {
-    transform: scale(1.05);
 }
 
 /* ===============================
@@ -376,6 +361,9 @@
     margin: 20px auto;
     padding: 20px;
     border-left: 4px solid #16a34a;
+    border-right: 4px solid #4ade80;
+    border-bottom: 4px solid #4ade80;
+    border-top: 4px solid #4ade80;
 }
 
 .martian-theme h2 {
@@ -399,7 +387,6 @@
 
 .martian-theme .imagem img {
     width: 100%;
-    max-width: 400px;
     display: block;
     margin: 20px auto;
     border-radius: 10px;
@@ -444,6 +431,9 @@
     margin: 20px auto;
     padding: 20px;
     border-left: 4px solid #22c55e;
+    border-right: 4px solid #22c55e;
+    border-bottom: 4px solid #22c55e;
+    border-top: 4px solid #22c55e;
 }
 
 .lantern-theme h2 {
@@ -467,19 +457,13 @@
 
 .lantern-theme .imagem img {
     width: 100%;
-    max-width: 400px;
     display: block;
     margin: 20px auto;
     border-radius: 10px;
     border: 3px solid #22c55e;
 }
 
-.wonderwoman-theme p,
-.wonderwoman-theme li,
-.wonderwoman-theme span,
-.wonderwoman-theme strong {
-    color: #FFEFDC;
-}
+
 
 /* =========================================
    PADRÃO GLOBAL (TODOS OS HERÓIS)
@@ -506,4 +490,32 @@ body section {
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
+}
+
+/* ============================================
+   CORES PADRÃO POR PERSONAGEM (USADO NO HOVER)
+   ============================================ */
+
+.batman-theme {
+    --cor-destaque: #facc15;
+}
+
+.superman-theme {
+    --cor-destaque: #ff3c00;
+}
+
+.flash-theme {
+    --cor-destaque: #F39D24;
+}
+
+.wonderwoman-theme {
+    --cor-destaque: #A93018;
+}
+
+.lantern-theme {
+    --cor-destaque: #22c55e;
+}
+
+.martian-theme {
+    --cor-destaque: #16a34a;
 }

@@ -6,13 +6,11 @@
     margin-bottom: 20px;
 }
 
-/* serve tanto pra <button> quanto <a> */
 .btn-link,
 #btn-herois {
     display: inline-block;
     position: relative;
     overflow: hidden;
-
     text-decoration: none;
     background: transparent;
     border: 2px solid var(--cor-destaque);
@@ -25,7 +23,6 @@
     cursor: pointer;
 }
 
-/* efeito */
 .btn-link::after,
 #btn-herois::after {
     content: "";
@@ -72,7 +69,9 @@
     border: 1px solid rgba(255,255,255,0.05);
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeUp 0.6s ease forwards;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
 }
 
 .card h3 {
@@ -91,6 +90,11 @@
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 0 25px var(--cor-destaque);
 }
+
+.card {
+    animation: fadeUp 0.6s ease forwards, glowPulse 2s infinite;
+}
+
 .card:hover h3 {
     letter-spacing: 1px;
 }
@@ -206,74 +210,28 @@
     box-shadow: 0 0 20px #10833a;
 }
 
-/* ============================================
-   BOTÃO / LINK 
-   ============================================ */
-.btn-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* serve tanto pra <button> quanto <a> */
-.btn-link,
-#btn-herois {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-
-    text-decoration: none;
-    background: transparent;
-    border: 2px solid var(--cor-destaque);
-    color: var(--cor-destaque);
-    font-family: var(--fonte-principal);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 12px 32px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* efeito */
-.btn-link::after,
-#btn-herois::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--cor-destaque);
-    top: 0;
-    left: -100%;
-    transition: 0.3s;
-    z-index: -1;
-}
-
-.btn-link:hover::after,
-#btn-herois:hover::after {
-    left: 0;
-}
-
-.btn-link:hover,
-#btn-herois:hover {
-    color: #000;
-}
-
 
 
 .section-box {
     background: rgba(0, 0, 0, 0.55);
-    padding: 30px;
+    backdrop-filter: blur(8px);
+
     border-radius: 12px;
-    backdrop-filter: blur(10px);
+    padding: 25px;
     margin-bottom: 25px;
+
     border: 1px solid rgba(255, 255, 255, 0.08);
 
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
     transition: 0.3s;
+
+    text-align: center;
 }
 
 .section-box:hover {
     transform: translateY(-6px) scale(1.01);
-    box-shadow: 0 0 25px rgba(169, 48, 24, 0.4);
+    box-shadow: 0 0 25px var(--cor-destaque);
+    animation: glowPulse 2s infinite;
 }
 
 
@@ -286,31 +244,14 @@
 .section-box li {
     margin: 6px 0;
 }
-.section-box {
-    text-align: center;
-}
+
 
 .section-box h2 {
     font-size: 2.2rem;
     letter-spacing: 3px;
 }
 
-.section-box {
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(8px);
 
-    border-radius: 12px;
-    padding: 25px;
-
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    transition: 0.3s;
-
-    text-align: center;
-}
-
-.section-box:hover {
-    transform: translateY(-5px);
-}
 
 .section-box ul {
     display: inline-block;
@@ -318,17 +259,56 @@
 }
 
 .hero-img {
-    max-width: 350px;
+    max-width: 450px;
     width: 100%;
     display: block;
     margin: 25px auto 0;
-    border-radius: 12px;
+    border-radius: 15px;
 
-    box-shadow: 0 0 25px rgba(169, 48, 24, 0.6);
-    transition: 0.3s;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .hero-img:hover {
+    border: 3px solid var(--cor-destaque);
     transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(169, 48, 24, 0.9);
+    box-shadow: 0 0 20px var(--cor-destaque);
+    animation: glowPulse 1.2s infinite;
+}
+
+.section-box {
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+}
+
+/* camada da borda animada */
+.section-box::before {
+    content: "";
+    position: absolute;
+    inset: -2px; /* controla espessura da borda */
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--cor-destaque),
+        transparent
+    );
+
+    background-size: 200% 200%;
+    animation: borderFlow 3s linear infinite;
+
+    opacity: 0;
+    filter: blur(2px); 
+    transition: 0.3s;
+
+    z-index: -1;
+}
+
+/* ativa no hover */
+.section-box:hover::before {
+    opacity: 1;
+    opacity: 0.6;
 }

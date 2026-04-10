@@ -1,6 +1,39 @@
 @keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+/* ============================================
+   GLOW ANIMADO DE ENERGIA
+   ============================================ */
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 5px var(--cor-destaque);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--cor-destaque);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--cor-destaque);
+    }
+}
+
+/* ============================================
+   BORDA ANIMADA (NEON)
+============================================ */
+
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+

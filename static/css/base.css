@@ -13,6 +13,7 @@
     --cor-destaque: #f0c040;
     --fonte-principal: 'Oswald', Arial, sans-serif;
     --max-largura: 800px;
+    --transicao-padrao: 0.3s ease;
 }
 
 /* ============================================
@@ -40,6 +41,7 @@ body {
 
     background-size: cover;
     background-position: center;
+
     background-attachment: fixed;
 
     color: var(--cor-texto);
@@ -53,4 +55,21 @@ body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+.secundario-item {
+    transition: var(--transicao-padrao);
+}
+
+.secundario-item:hover {
+    transform: translateY(-4px);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transicao-padrao);
+}
+
+p {
+    margin-bottom: 12px;
 }

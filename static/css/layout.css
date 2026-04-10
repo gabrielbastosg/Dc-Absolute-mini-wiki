@@ -103,8 +103,8 @@ section {
    FUNDO DAS SEÇÕES (INFO, HABILIDADES, ETC)
    ============================================ */
 .info, .habilidades, .equipamentos, .descricao, .origem, .curiosidades, .secundarios {
-    background-color: #8B0000; /* vermelho escuro */
-    padding: 50px 20px;        /* mais espaço acima/baixo */
+    background-color: transparent;
+    padding: 50px 20px;        
 }
 
 /* Ajuste de container já existente */
@@ -133,4 +133,16 @@ section {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+}
+
+
+
+.section-box ul li {
+    transition: 0.2s;
+    list-style-type: none
+}
+
+.section-box ul li:hover {
+    color: var(--cor-destaque);
+    transform: translateX(5px);
 }
