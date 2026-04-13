@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heróis - DC Absolute</title>
+
     <link rel="stylesheet" href="../static/css/base.css">
     <link rel="stylesheet" href="../static/css/layout.css">
     <link rel="stylesheet" href="../static/css/components.css">
@@ -28,50 +29,94 @@
         <div id="cards">
 
             <!-- BATMAN -->
-            <div class="card batman">
+            <div class="card batman" 
+                 data-name="Batman" 
+                 data-description="O Cavaleiro das Trevas de Gotham"
+                 data-image="../static/img/Absolute_Batman.webp"
+                 data-color="linear-gradient(135deg, #000000, #434343)"
+                 data-link="batman.html">
                 <h3>Batman</h3>
                 <p>O cavaleiro das trevas</p>
-                <a href="batman.html" class="btn-link">Ver detalhes</a>
+                <a href="#" class="btn-link">Ver detalhes</a>
             </div>
 
             <!-- SUPERMAN -->
-            <div class="card superman">
+            <div class="card superman" 
+                 data-name="Superman" 
+                 data-description="O Último Filho de Krypton"
+                 data-image="../static/img/Absolute_Superman.webp"
+                 data-color="linear-gradient(135deg, #000000, #b71c1c, #ff9800)"
+                 data-link="superman.html">
                 <h3>Superman</h3>
                 <p>O último filho de Krypton</p>
-                <a href="superman.html" class="btn-link">Ver detalhes</a>
+                <a href="#" class="btn-link">Ver detalhes</a>
             </div>
 
             <!-- MULHER MARAVILHA -->
-            <div class="card wonderwoman">
+            <div class="card wonderwoman" 
+                 data-name="Mulher-Maravilha" 
+                 data-description="A Guerreira Amazona"
+                 data-image="../static/img/Absolute_Wonder_Woman.webp"
+                 data-color="linear-gradient(135deg, #8B0000, #000000, #555555)"
+                 data-link="mulher_maravilha.html">
                 <h3>Mulher-Maravilha</h3>
                 <p>A guerreira amazona</p>
-                <a href="mulher_maravilha.html" class="btn-link">Ver detalhes</a>
+                <a href="#" class="btn-link">Ver detalhes</a>
             </div>
 
             <!-- LANTERNA VERDE -->
-            <div class="card lantern">
+            <div class="card lantern" 
+                 data-name="Lanterna Verde" 
+                 data-description="O Portador do Anel Esmeralda"
+                 data-image="../static/img/Absolute_Green_Lantern.jpg"
+                 data-color="linear-gradient(135deg, #00c853, #1b5e20)"
+                 data-link="lanterna_verde.html">
                 <h3>Lanterna Verde</h3>
                 <p>A cavaleira esmeralda</p>
-                <a href="lanterna_verde.html" class="btn-link">Ver detalhes</a>
+                <a href="#" class="btn-link">Ver detalhes</a>
             </div>
 
             <!-- FLASH -->
-            <div class="card flash">
+            <div class="card flash" 
+                 data-name="Flash" 
+                 data-description="O Homem Mais Rápido do Mundo"
+                 data-image="../static/img/Absolute_Flash.webp"
+                 data-color="linear-gradient(135deg, #ff0000, #ffffff, #000000)"
+                 data-link="flash.html">
                 <h3>Flash</h3>
                 <p>O homem mais rápido do mundo</p>
-                <a href="flash.html" class="btn-link">Ver detalhes</a>
+                <a href="#" class="btn-link">Ver detalhes</a>
             </div>
 
             <!-- CAÇADOR DE MARTE -->
-            <div class="card martian">
+            <div class="card martian" 
+                 data-name="Caçador de Marte" 
+                 data-description="O Último Marciano de Marte"
+                 data-image="../static/img/Absolute_Martian_Manhunter.webp"
+                 data-color="linear-gradient(135deg, #004d40, #00bfa5)"
+                 data-link="cacador_marte.html">
+                 
                 <h3>Caçador de Marte</h3>
                 <p>O último marciano</p>
-                <a href="cacador_marte.html" class="btn-link">Ver detalhes</a>
+                <a href="#" class="btn-link">Ver detalhes</a>
             </div>
 
         </div>
 
     </section>
+
+    <!-- MODAL -->
+    <div id="heroModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="heroImage" src="" alt="Heroi" style="width:200px; margin-bottom:15px;">
+            <h2 id="heroName">Nome do Herói</h2>
+            <p id="heroDescription">Descrição do herói...</p>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="../static/js/script.js"></script>
 
 </body>
 </html>
