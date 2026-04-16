@@ -119,27 +119,59 @@ section {
 }
 
 .secundarios-lista {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  margin: 30px 0;
+}
+.secundarios-lista h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--cor-destaque);
 }
 
 .secundario-item {
     text-align: center;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.secundario-icone {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
 }
 
 .secundario-icone img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
 }
-
-
+.secundario-item:hover img {
+  transform: scale(1.1);
+}
+.secundario-item:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 0 15px var(--cor-destaque);
+}
+.secundario-item p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
 
 .section-box ul li {
     transition: 0.2s;
-    list-style-type: none
+    list-style-type: none;
 }
 
 .section-box ul li:hover {
