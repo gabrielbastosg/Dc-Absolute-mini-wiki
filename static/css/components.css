@@ -333,6 +333,7 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+
 }
 
 .modal-content {
@@ -341,6 +342,7 @@
   max-width:700px;
   margin: 8% auto;
   padding: 25px;
+  padding-top: 50px;
   border-radius: 12px;
   display: flex;
   gap: 20px;
@@ -350,6 +352,8 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   transform: scale(0.8);
   transition: transform 0.3s ease;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .modal.show .modal-content {
@@ -382,12 +386,13 @@
 #heroImage {
   width: 250px;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
+  max-height: 300px;
 }
 
 .modal-text {
   flex: 1;
-
+  margin-top: 10px;
   background: rgba(0, 0, 0, 0.7);
   padding: 15px;
   border-radius: 8px;
@@ -407,6 +412,14 @@
   transform: scale(0.95);
 }
 
+#heroType {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  color: var(--cor-destaque);
+}
 
 @media (max-width: 768px) {
   .modal-content {

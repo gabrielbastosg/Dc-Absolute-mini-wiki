@@ -181,68 +181,97 @@
         </div>
     </section>
 
-    <!-- PERSONAGENS SECUNDÁRIOS -->
-        <!-- PERSONAGENS SECUNDÁRIOS -->
-<section class="secundarios-lista">
+<!-- PERSONAGENS SECUNDÁRIOS -->
+<section class="secundarios">
 
-  <h2>Aliados</h2>
+    <div class="secundarios-bloco">
+        <h2>Aliados</h2>
+        <div class="secundarios-lista">
 
-  <div class="secundario-item clickable"
-       data-name="Alfred Pennyworth"
-       data-description="Mentor e figura paterna de Bruce Wayne."
-       data-image="../static/img/alfred.jpg">
+            <div class="secundario-item clickable"
+                data-name="Lois Lane"
+                data-description="Investigadora ligada à Lazarus Corp que ainda busca seu caminho, inicialmente desconfiando de Superman enquanto começa a enxergar além de suas crenças."
+                data-image=""
+                data-tipo="Aliado">
 
-      <div class="secundario-icone">
-          <img src="../static/img/alfred.jpg" alt="Alfred">
-      </div>
-      <p>Lois Lane</p>
-  </div>
+                <div class="secundario-icone">
+                    <img src="" alt="Lois Lane">
+                </div>
+                <p>Lois Lane</p>
+            </div>
 
-  <div class="secundario-item clickable"
-       data-name="Mulher-Gato"
-       data-description="Selina Kyle é uma ladra habilidosa e interesse romântico de Batman."
-       data-image="../static/img/catwoman.jpg">
+            <div class="secundario-item clickable"
+                data-name="Jimmy Olsen"
+                data-description="Fotojornalista e ex-membro dos Omega Men, luta contra o sistema opressor enquanto registra a verdade ao lado de Superman."
+                data-image="../static/img/"
+                data-tipo="Aliado">
 
-      <div class="secundario-icone">
-          <img src="../static/img/catwoman.jpg" alt="Mulher-Gato">
-      </div>
-      <p>Jim Olsen</p>
-  </div>
+                <div class="secundario-icone">
+                    <img src="../static/img/" alt="Jimmy Olsen">
+                </div>
+                <p>Jimmy olsen</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="secundarios-bloco">
+        <h2>Adversarios</h2>
+        <div class="secundarios-lista">
+
+            <div class="secundario-item clickable"
+                data-name="Ra's al ghul"
+                data-description="Imortal e líder da Lazarus Corp, acredita que deve controlar o mundo para salvá-lo, manipulando aliados como Brainiac e enfrentando Superman."
+                data-image="../static/img/Absolute_Ras.webp"
+                data-tipo="Adversario">
+
+                <div class="secundario-icone">
+                    <img src="../static/img/Absolute_Ras.webp" alt="Ra's al ghul">
+                </div>
+                <p>Ra's al ghul</p>
+            </div>
+
+            <div class="secundario-item clickable"
+                data-name="Brainiac"
+                data-description="Inteligência alienígena insana que coleta conhecimento e captura cidades, manipulando aliados como Ra’s al Ghul para seus próprios experimentos."
+                data-image="../static/img/Absolute_Brainiac.webp"
+                data-tipo="Adversario">
+                
+
+                <div class="secundario-icone">
+                    <img src="../static/img/Absolute_Brainiac.webp" alt="Brainiac">
+                </div>
+                <p>Brainiac</p>
+            </div>
+
+        </div>
+    </div>
 
 </section>
-<!--Antagonistas-->
-<section class="secundarios-lista">
 
-  <h2>Adversarios</h2>
+<div id="heroModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
 
-  <div class="secundario-item clickable"
-       data-name="Coringa"
-       data-description="Um criminoso caótico que vive para espalhar o caos."
-       data-image="../static/img/coringa.jpg">
+        <img id="heroImage" src="" alt="Personagem">
 
-      <div class="secundario-icone">
-          <img src="../static/img/coringa.jpg" alt="Coringa">
-      </div>
-      <p>Ra's al ghul</p>
-  </div>
+        <div class="modal-text">
+            <p id="heroType"></p>
+            <h2 id="heroName"></h2>
+            <p id="heroDescription"></p>
 
-  <div class="secundario-item clickable"
-       data-name="Bane"
-       data-description="Um inimigo extremamente forte e estratégico."
-       data-image="../static/img/bane.jpg">
-
-      <div class="secundario-icone">
-          <img src="../static/img/bane.jpg" alt="Bane">
-      </div>
-      <p>Brainiac</p>
-  </div>
-
-</section>
+            <!-- opcional (se usar link depois) -->
+            <a id="heroLink" href="#" target="_blank" style="display:none;">Ver mais</a>
+        </div>
+    </div>
+</div>
 
     <!-- VOLTAR -->
     <div class="btn-container">
         <a href="herois.html" class="btn-link">Voltar</a>
     </div>
+
+<script src="../static/js/script.js"></script>
 
 </body>
 </html>

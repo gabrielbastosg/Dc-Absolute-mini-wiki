@@ -180,63 +180,85 @@
         </div>
     </section>
 
-    <!-- PERSONAGENS SECUNDÁRIOS -->
-            <!-- PERSONAGENS SECUNDÁRIOS -->
-        <section class="secundarios-lista">
+<!-- PERSONAGENS SECUNDÁRIOS -->
+<section class="secundarios">
 
+    <div class="secundarios-bloco">
         <h2>Aliados</h2>
+        <div class="secundarios-lista">
 
-        <div class="secundario-item clickable"
-            data-name="Alfred Pennyworth"
-            data-description="Mentor e figura paterna de Bruce Wayne."
-            data-image="../static/img/alfred.jpg">
+            <div class="secundario-item clickable"
+                data-name="Alfred Pennyworth"
+                data-description="Mentor e figura paterna de Bruce Wayne."
+                data-image="../static/img/alfred.jpg">
 
-            <div class="secundario-icone">
-                <img src="../static/img/alfred.jpg" alt="Alfred">
+                <div class="secundario-icone">
+                    <img src="../static/img/alfred.jpg" alt="Alfred">
+                </div>
+                <p>Alfred</p>
             </div>
-            <p>Alfred</p>
-        </div>
 
-        <div class="secundario-item clickable"
-            data-name="Mulher-Gato"
-            data-description="Selina Kyle é uma ladra habilidosa e interesse romântico de Batman."
-            data-image="../static/img/catwoman.jpg">
+            <div class="secundario-item clickable"
+                data-name="Mulher-Gato"
+                data-description="Selina Kyle é uma ladra habilidosa e interesse romântico de Batman."
+                data-image="../static/img/catwoman.jpg">
 
-            <div class="secundario-icone">
-                <img src="../static/img/catwoman.jpg" alt="Mulher-Gato">
+                <div class="secundario-icone">
+                    <img src="../static/img/catwoman.jpg" alt="Mulher-Gato">
+                </div>
+                <p>Mulher-Gato</p>
             </div>
-            <p>Mulher-Gato</p>
+
         </div>
+    </div>
 
-        </section>
-        <!--Antagonistas-->
-        <section class="secundarios-lista">
-
+    <div class="secundarios-bloco">
         <h2>Adversarios</h2>
+        <div class="secundarios-lista">
 
-        <div class="secundario-item clickable"
-            data-name="Coringa"
-            data-description="Um criminoso caótico que vive para espalhar o caos."
-            data-image="../static/img/coringa.jpg">
+            <div class="secundario-item clickable"
+                data-name="Coringa"
+                data-description="Um criminoso caótico que vive para espalhar o caos."
+                data-image="../static/img/coringa.jpg">
 
-            <div class="secundario-icone">
-                <img src="../static/img/coringa.jpg" alt="Coringa">
+                <div class="secundario-icone">
+                    <img src="../static/img/coringa.jpg" alt="Coringa">
+                </div>
+                <p>Coringa</p>
             </div>
-            <p>Coringa</p>
-        </div>
 
-        <div class="secundario-item clickable"
-            data-name="Bane"
-            data-description="Um inimigo extremamente forte e estratégico."
-            data-image="../static/img/bane.jpg">
+            <div class="secundario-item clickable"
+                data-name="Bane"
+                data-description="Um inimigo extremamente forte e estratégico."
+                data-image="../static/img/bane.jpg">
 
-            <div class="secundario-icone">
-                <img src="../static/img/bane.jpg" alt="Bane">
+                <div class="secundario-icone">
+                    <img src="../static/img/bane.jpg" alt="Bane">
+                </div>
+                <p>Bane</p>
             </div>
-            <p>Bane</p>
-        </div>
 
-        </section>
+        </div>
+    </div>
+
+</section>
+
+<div id="heroModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <img id="heroImage" src="" alt="Personagem">
+
+        <div class="modal-text">
+            <p id="heroType"></p>
+            <h2 id="heroName"></h2>
+            <p id="heroDescription"></p>
+
+            <!-- opcional (se usar link depois) -->
+            <a id="heroLink" href="#" target="_blank" style="display:none;">Ver mais</a>
+        </div>
+    </div>
+</div>
 
     <!-- VOLTAR -->
     <div class="btn-container">

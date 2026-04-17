@@ -156,10 +156,12 @@ section {
   height: 100%;
   object-fit: cover;
   transition: 0.3s;
+  object-position: top;
 }
 .secundario-item:hover img {
   transform: scale(1.1);
 }
+
 .secundario-item:hover {
   transform: translateY(-5px) scale(1.08);
   box-shadow: 0 0 15px var(--cor-destaque);
@@ -177,4 +179,19 @@ section {
 .section-box ul li:hover {
     color: var(--cor-destaque);
     transform: translateX(5px);
+}
+
+.secundarios-bloco {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 12px;
+
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.secundarios-bloco h2 {
+  text-align: center;
+  color: var(--cor-destaque);
+  margin-bottom: 15px;
 }

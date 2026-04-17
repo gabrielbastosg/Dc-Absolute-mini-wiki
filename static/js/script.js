@@ -8,16 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroDescription = document.getElementById('heroDescription');
   const heroImage = document.getElementById('heroImage');
   const heroLink = document.getElementById('heroLink');
+  const heroType = document.getElementById('heroType'); // ✅ NOVO
 
   const closeBtn = document.querySelector('.close-btn');
   const modalContent = document.querySelector('.modal-content');
 
-  // 🔥 FUNÇÃO CENTRAL (evita repetição)
-  function abrirModal({ name, description, image, color, link }) {
+  // 🔥 FUNÇÃO CENTRAL
+  function abrirModal({ name, description, image, color, link, tipo }) {
 
     heroName.textContent = name;
     heroDescription.textContent = description;
     heroImage.src = image;
+
+    // ✅ tipo (NOVO)
+    if (heroType) {
+      heroType.textContent = tipo || '';
+    }
 
     // link (só se existir)
     if (link) {
@@ -45,11 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       abrirModal({
-        name: card.getAttribute('data-name'),
-        description: card.getAttribute('data-description'),
-        image: card.getAttribute('data-image'),
-        color: card.getAttribute('data-color'),
-        link: card.getAttribute('data-link')
+        name: card.dataset.name,
+        description: card.dataset.description,
+        image: card.dataset.image,
+        color: card.dataset.color,
+        link: card.dataset.link,
+        tipo: card.dataset.tipo // opcional
       });
 
     });
@@ -60,25 +67,30 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', () => {
 
       abrirModal({
-        name: item.getAttribute('data-name'),
-        description: item.getAttribute('data-description'),
-        image: item.getAttribute('data-image'),
-        color: item.getAttribute('data-color')
+        name: item.dataset.name,
+        description: item.dataset.description,
+        image: item.dataset.image,
+        color: item.dataset.color,
+        tipo: item.dataset.tipo // ✅ NOVO
       });
 
     });
   });
 
   // 👉 FECHAR NO BOTÃO X
-  closeBtn.addEventListener('click', () => {
-    modal.classList.remove('show');
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('show');
+    });
+  }
 
   // 👉 FECHAR CLICANDO FORA
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('show');
-    }
-  });
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+      }
+    });
+  }
 
 });
