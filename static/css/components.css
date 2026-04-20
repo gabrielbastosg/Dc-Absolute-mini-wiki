@@ -314,19 +314,19 @@
 }
 
 .modal {
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.85);
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .modal.show {
@@ -342,62 +342,70 @@
   max-width:700px;
   margin: 8% auto;
   padding: 25px;
-  padding-top: 50px;
+  padding-top: 70px;
   border-radius: 12px;
   display: flex;
   gap: 20px;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transform: scale(0.8);
+  transform: scale(0.8) translateY(20px);
+  opacity: 0;
   transition: transform 0.3s ease;
   max-height: 80vh;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .modal.show .modal-content {
-  transform: scale(1);
+  transform: scale(1) translateY(0);
+  opacity: 1;
 }
 
 .close-btn {
-  position: absolute;
-  top: 12px;
-  right: 15px;
+    position: absolute;
+    top: 12px;
+    right: 15px;
 
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
 
-  font-size: 22px;
-  font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  color: var(--cor-destaque);
-  background:rgba(0, 0, 0, 0.6);
-  border: 1px solid var(--cor-destaque);
-  border-radius: 50%;
-  cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
 
-  transition: all 0.3s ease;
+    color: var(--cor-destaque);
+    background:rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
 }
 
 #heroImage {
-  width: 250px;
-  border-radius: 10px;
-  object-fit: contain;
-  max-height: 300px;
+    width: 250px;
+    border-radius: 10px;
+    object-fit: contain;
+    max-height: 300px;
+    
 }
 
 .modal-text {
-  flex: 1;
-  margin-top: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 15px;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
+    flex: 1;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
 }
 
 .close-btn:hover {

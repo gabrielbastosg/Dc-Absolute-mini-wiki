@@ -135,17 +135,19 @@ section {
 
 .secundario-item {
     text-align: center;
-    cursor: pointer;
-    padding: 12px;
+    width: 180px;
+    padding: 18px;
     border-radius: 12px;
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .secundario-icone {
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   overflow: hidden;
   border-radius: 50%;
   margin: auto;
@@ -163,7 +165,7 @@ section {
 }
 
 .secundario-item:hover {
-  transform: translateY(-5px) scale(1.08);
+  transform: translateY(-6px) scale(1.05);
   box-shadow: 0 0 15px var(--cor-destaque);
 }
 .secundario-item p {
@@ -194,4 +196,9 @@ section {
   text-align: center;
   color: var(--cor-destaque);
   margin-bottom: 15px;
+}
+
+.secundario-item:active,
+.card:active {
+  transform: scale(0.95);
 }
