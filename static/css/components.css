@@ -21,6 +21,12 @@
     padding: 12px 32px;
     border-radius: 4px;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-link:active,
+#btn-herois:active {
+    transform: scale(0.95);
 }
 
 .btn-link::after,
@@ -64,14 +70,24 @@
     width: 220px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
     box-shadow: 0 0 10px var(--cor-destaque);
     border: 1px solid rgba(255,255,255,0.05);
-    opacity: 0;
-    transform: translateY(20px);
+
     position: relative;
     z-index: 1;
     overflow: visible;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: fadeUp 0.6s ease forwards;
+    animation-fill-mode: forwards;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 .card h3 {
@@ -92,7 +108,8 @@
 }
 
 .card {
-    animation: fadeUp 0.6s ease forwards, glowPulse 2s infinite;
+    animation: fadeUp 0.6s ease forwards;
+    will-change: transform, box-shadow;
 }
 
 .card:hover h3 {
@@ -237,7 +254,7 @@
 
 .section-box ul {
     display: inline-block;
-    text-align: left; /* mantém leitura boa */
+    text-align: left; 
     margin-top: 10px;
 }
 
@@ -253,10 +270,6 @@
 
 
 
-.section-box ul {
-    display: inline-block;
-    text-align: left;
-}
 
 .hero-img {
     max-width: 450px;
@@ -309,7 +322,6 @@
 
 /* ativa no hover */
 .section-box:hover::before {
-    opacity: 1;
     opacity: 0.6;
 }
 
@@ -351,10 +363,12 @@
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transform: scale(0.8) translateY(20px);
+  transition: transform 0.3s ease,opacity 0.3s ease;
   opacity: 0;
-  transition: transform 0.3s ease;
   max-height: 80vh;
-  overflow-y: hidden;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  will-change: transform, opacity;
 }
 
 .modal.show .modal-content {
@@ -434,4 +448,9 @@
     flex-direction: column;
     text-align: center;
   }
+  #heroImage {
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+}
 }
